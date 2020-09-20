@@ -1,36 +1,80 @@
 # Fitness Tracker
-Allows the user to track a workout. Various attributes of the workout can be stored. The workouts are saved in a Mongo database.
 
-## Description 
-Created a fitness tracking app utilizing Node.js, Express.js, MongoDB, Heroku and Mongoose. Majority of the front end code was provided in a homework prompt as part of a web development boot camp. Allows the user to track their workouts and save them in a database.
+Track your workouts with Fitness Tracker. The app will keep track of every exercise in your workout. The app dashboard will display weekly summary graphs of all workouts done in a week.
 
-## Live site: 
+## Getting Started
 
+1. Clone repository. 
+2. Check in routes/api-routes and comment in block of code if you want the database to be prepopulated with dummy values
+3. npm install
+4. node server.js
 
-## Images
-Image of main view:
-![Image of user's view when you visit the site](./public/images/main-view.png)
+Running seeders/seed.js is optional to have a prepopulated database.
 
-Image of adding exercises:
-![Image of user's view when adding an exercise](./public/images/exercise-view.png)
+## Site Pictures
 
-Image of Workout Dashboard
-![Image of user's view when looking at the Workout Dashboard](./public/images/workout-dashboard.png)
+1. Homepage displaying last workout
 
-## Installation 
-You will need to npm init to get all the required node modules. If you are running the code locally the local host is set to port 3000. You will also need to go in to the config folder and possibly change the config.json values. The file I used to start the project is server.js.
+![Site](public/assets/homepage.png)
 
-## Usage 
-The primary purpose of this was to meet the requirements of a homework assignment. The major goal seems to be practice with MongoDB and Mongoose You could use it to track a workout, or as the basis of a workout app.
+2. Creating Workouts
 
-## Credits 
+![Site](public/assets/live.gif)
 
 
-## Contributing 
+3. Last Week's Summary
+
+![Site](public/assets/dash.png)
+
+## Code Snippets
 
 
-## Challenges
+1. Adding to an array type
+
+```javascript
+
+    // add exercise
+    app.put("/api/workouts/:id", (req, res) => {
+
+        db.Workout.findOneAndUpdate(
+            { _id: req.params.id },
+            {
+                $inc: { totalDuration: req.body.duration },
+                $push: { exercises: req.body }
+            },
+            { new: true }).then(dbWorkout => {
+                res.json(dbWorkout);
+            }).catch(err => {
+                res.json(err);
+            });
+
+    });
+    
+```
+* This function will add an exercise to the array of exercises that belong to the workout with the given id. Here we will locate the workout with the given ID and update its fields. We will increase the total duration of the workout by the duration of the exercise being inserted. We will push the exercise to the array of exercises.
 
 
-## License
+## Built With
 
+* [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Bootstrap](https://getbootstrap.com/)
+* [Javascript](https://www.javascript.com/)
+* [Node.js](https://nodejs.org/en/)
+* [Express](https://www.npmjs.com/package/express)
+* [MongoDB](https://www.mongodb.com/)
+
+
+## Deployed Link
+
+* [See Live Site](https://track-your-fitness.herokuapp.com/?id=5e3b1ea870e2390017f01261)
+
+## Author
+
+ * **Carlos Toledo** 
+
+## Links
+
+- [Link to site repository](https://github.com/kqarlos/fitness-tracker)
+- [Link to Github](https://www.github.com/kqarlos)
+- [Link to LinkedIn](https://www.linkedin.com/in/carlos-toledo415/)
