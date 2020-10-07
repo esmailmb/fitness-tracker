@@ -15,16 +15,16 @@ Running seeders/seed.js is optional to have a prepopulated database.
 
 1. Homepage displaying last workout
 
-![Site](public/assets/homepage.png)
+![Site]()
 
 2. Creating Workouts
 
-![Site](public/assets/live.gif)
+![Site]()
 
 
 3. Last Week's Summary
 
-![Site](public/assets/dash.png)
+![Site]()
 
 ## Code Snippets
 
@@ -67,7 +67,7 @@ Running seeders/seed.js is optional to have a prepopulated database.
 
 ## Deployed Link
 
-* [See Live Site](https://track-your-fitness.herokuapp.com/?id=5e3b1ea870e2390017f01261)
+* [See Live Site]()
 
 ## Author
 
@@ -75,6 +75,6 @@ Running seeders/seed.js is optional to have a prepopulated database.
 
 ## Links
 
-- [Link to site repository](https://github.com/kqarlos/fitness-tracker)
-- [Link to Github](https://www.github.com/kqarlos)
-- [Link to LinkedIn](https://www.linkedin.com/in/carlos-toledo415/)
+- [Link to site repository]()
+- [Link to Github]()
+- [Link to LinkedIn]()
