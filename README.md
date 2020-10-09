@@ -58,11 +58,5 @@ See Demo
 
 * [See Live Site]()
 
-## Author
 
 
-## Links
-
-- [Link to site repository]()
-- [Link to Github]()
-- [Link to LinkedIn]()
