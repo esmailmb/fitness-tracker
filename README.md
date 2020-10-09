@@ -11,20 +11,9 @@ Track your workouts with Fitness Tracker. The app will keep track of every exerc
 
 Running seeders/seed.js is optional to have a prepopulated database.
 
-## Site Pictures
+## Site Demo
 
-1. Homepage displaying last workout
-
-![Site]()
-
-2. Creating Workouts
-
-![Site]()
-
-
-3. Last Week's Summary
-
-![Site]()
+See Demo
 
 ## Code Snippets
 
@@ -71,7 +60,6 @@ Running seeders/seed.js is optional to have a prepopulated database.
 
 ## Author
 
- * **Carlos Toledo** 
 
 ## Links
 
